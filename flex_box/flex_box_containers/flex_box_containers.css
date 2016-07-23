@@ -1,0 +1,67 @@
+
+
+/*
+Display
+Display defines a flex container.
+It can be block :*/
+
+
+.container {
+  display: flex; 
+}
+/*Or inline:
+*/
+
+.container {
+  display: inline-flex;
+}
+
+/*flex-direction*/
+
+
+.container {
+  flex-direction: row;
+}
+
+/*(this is default)
+the items in the container will go left to right*/
+
+.container {
+  flex-direction: row-reverse;
+}
+
+/*the items in the container will go right to left*/
+
+ .container {
+  flex-direction: column; 
+}
+
+/*the items in the container will go top to bottom*/
+
+ .container {
+  flex-direction: column-reverse;
+}
+
+/*the items in the container will go bottom to top*/
+
+
+/*Flex Wrap
+By default, flex items will try to fit into 
+a single line, but flex-wrap will wrap them
+around depending on their variables.
+*/
+
+.container{
+  flex-wrap: nowrap;
+}
+/*nowrap keeps it all in one line, left-to-right, as in default*/
+
+.container{
+  flex-wrap: wrap; 
+}
+/*wrap allows multiple lines, left-to-right;*/
+.container{
+  flex-wrap: wrap-reverse;
+}
+/*wrap reverse allows multiple lines, 
+but reverses them, right-to-left*/

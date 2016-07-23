@@ -1,0 +1,42 @@
+
+
+/*
+Display
+Display defines a flex container.
+It can be block :*/
+
+
+.container {
+  display: flex; 
+}
+/*Or inline:
+What's the difference?
+*/
+
+.container {
+  display: inline-flex;
+}
+
+/*flex-direction*/
+
+
+.container {
+  flex-direction: row;
+}
+
+.container {
+  flex-direction: row-reverse;
+}
+ .container {
+  flex-direction: column; 
+}
+
+ .container {
+  flex-direction: column-reverse;
+}
+(default): left to right in ltr; right to left in rtl
+
+row-reverse
+row  
+column
+column-reverse;
