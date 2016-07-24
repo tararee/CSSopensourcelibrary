@@ -1,48 +1,48 @@
 
 
-/*
-Display
-Display defines a flex container.
-It can be block :*/
 
+/*display
+display defines a flex container.*/
 
+/*It can be either a block:*/
 .container {
   display: flex; 
 }
-/*Or inline:
-*/
 
+/*Or inline:*/
 .container {
   display: inline-flex;
 }
 
 /*flex-direction*/
+/*flex-direction determines which direction the containers
+flow, and whether they're in columns or rows
+*/
 
-
+/* row:(this is default)*/
+/* the items in the container will go left to right*/
 .container {
   flex-direction: row;
 }
-
-/*(this is default)
-the items in the container will go left to right*/
+/*row-reverse*/
+/*the items in the container will go right to left*/
 
 .container {
   flex-direction: row-reverse;
 }
 
-/*the items in the container will go right to left*/
-
+/*flex-direction*/
+/*the items in the container will go top to bottom*/
  .container {
   flex-direction: column; 
 }
 
-/*the items in the container will go top to bottom*/
-
+/*column-reverse*/
+/*the items in the container will go bottom to top*/
  .container {
   flex-direction: column-reverse;
 }
 
-/*the items in the container will go bottom to top*/
 
 
 /*Flex Wrap
@@ -51,17 +51,84 @@ a single line, but flex-wrap will wrap them
 around depending on their variables.
 */
 
+/*nowrap keeps it all in one line, left-to-right, as in default*/
 .container{
   flex-wrap: nowrap;
 }
-/*nowrap keeps it all in one line, left-to-right, as in default*/
 
+
+/*wrap allows multiple lines, left-to-right;*/
 .container{
   flex-wrap: wrap; 
 }
-/*wrap allows multiple lines, left-to-right;*/
+
+ /*wrap reverse allows multiple lines, 
+but reverses them, right-to-left*/ 
 .container{
-  flex-wrap: wrap-reverse;
+flex-wrap: wrap-reverse;
 }
-/*wrap reverse allows multiple lines, 
-but reverses them, right-to-left*/
+
+/*
+flex-flow is a shortcut that lets you set the
+flex-direction and flex-wrap properties at the same time*/
+
+.container{
+flex-flow: <‘flex-direction’> || <‘flex-wrap’>;
+}
+/*Notice that you do not need to separate the two properties
+in practice, you simply state them one after the other.*/
+.container{
+flex-flow: column nowrap;
+}
+
+/*justify-content*/
+/*justify-content
+This defines the alignment along the main axis.
+It says where to put left over free space if 
+the flex items are inflexible or if they've reached their 
+maximum size.*/
+
+/*flex-start (default): items are packed together at the front*/
+.container {
+  justify-content: flex-start;
+}
+/*flex-end: items are packed toward to end line*/
+.container {
+  justify-content: flex-end;
+}
+/*center: items are centered along the line*/
+.container {
+  justify-content: center;
+/*  space-between: items are evenly distributed in the line; 
+  first item is on the start line, last item on the end line*/
+ .container {
+  justify-content: space-between; 
+}
+/*space-around: items are evenly distributed.  
+Note that visually the spaces aren't equal, 
+since all the items have equal space on both sides. 
+The first item will have one unit of space against
+ the container edge, but two units of space between 
+ the next item because that next item has its own 
+ spacing that applies.*/
+.container {
+  justify-content: space-around;
+}
+/*align-items*/
+/*defines how items are laid out align with the
+cross-axis, or up/down in comparison to the 
+center line */
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
