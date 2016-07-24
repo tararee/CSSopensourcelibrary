@@ -142,17 +142,54 @@ on the bottom of the the space*/
 center line*/
 .container {
   align-items: center;
-
+}
 /*stretch: top and bottom stretch to fill container*/
-}.container {
+.container {
   align-items: stretch;
-
+}
 /*baseline: items are aligned along their baselines;
 for example, if an item has a line of text, item will align to that.*/
-}.container {
-  align-items: baseline;
 
-align-content
 .container {
-  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+  align-items: baseline;
+}
+
+/*align-content*/
+/*align-content: determines how items are aligned along their
+x-axis (up-and-down) when there is more than one line.*/
+
+/*stretch: This is default. Items stretch to fill extra space;*/
+.container {
+  align-content:stretch;
+}
+
+/*flex-start: lines packed to the start
+ of the container(upper left)*/
+ .container {
+  align-content: flex-start;
+}
+
+/*flex-end: lines packed to the end
+ of the container(bottom right)*/
+.container {
+  align-content: flex-end;
+}
+
+/*center: the lines are packed to the 
+center of the container*/
+.container {
+  align-content: center;
+}
+
+/*space-between: the lines are evenly distributed
+with the first line at the start (upper left)
+of the container while the last one is at the end; */
+.container {
+  align-content: space-between;
+}
+
+/*space-around:  the lines are evenly 
+distributed with equal space around each line; */
+.container {
+  align-content: space-around;
 }
