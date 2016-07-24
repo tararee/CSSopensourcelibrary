@@ -1,4 +1,5 @@
-
+/*Overview of All Attributes
+of Flexbox Containers*/
 
 
 /*display
@@ -68,9 +69,10 @@ but reverses them, right-to-left*/
 flex-wrap: wrap-reverse;
 }
 
-/*
-flex-flow is a shortcut that lets you set the
-flex-direction and flex-wrap properties at the same time*/
+/*flex-flow*/
+/*a shortcut that lets you set the
+flex-direction and flex-wrap properties at the same time
+*/
 
 .container{
 flex-flow: <‘flex-direction’> || <‘flex-wrap’>;
@@ -92,18 +94,22 @@ maximum size.*/
 .container {
   justify-content: flex-start;
 }
+
 /*flex-end: items are packed toward to end line*/
 .container {
   justify-content: flex-end;
 }
+
 /*center: items are centered along the line*/
 .container {
   justify-content: center;
+
 /*  space-between: items are evenly distributed in the line; 
   first item is on the start line, last item on the end line*/
  .container {
   justify-content: space-between; 
 }
+
 /*space-around: items are evenly distributed.  
 Note that visually the spaces aren't equal, 
 since all the items have equal space on both sides. 
@@ -114,21 +120,39 @@ The first item will have one unit of space against
 .container {
   justify-content: space-around;
 }
+
 /*align-items*/
 /*defines how items are laid out align with the
 cross-axis, or up/down in comparison to the 
 center line */
-.container {
-  align-items: flex-start | flex-end | center | baseline | stretch;
+
+
+/*flex-start: top margin edge of the items is placed 
+on the top of the the space*/
+ .container {
+  align-items: flex-start;
 }
+/*flex-end: bottom margin edge of the items is placed 
+on the bottom of the the space*/
+.container { 
+  align-items: flex-end;
+}
+
+/*center: the centers of items are centered along the
+center line*/
 .container {
-  align-items: flex-start | flex-end | center | baseline | stretch;
+  align-items: center;
+
+/*stretch: top and bottom stretch to fill container*/
 }.container {
-  align-items: flex-start | flex-end | center | baseline | stretch;
+  align-items: stretch;
+
+/*baseline: items are aligned along their baselines;
+for example, if an item has a line of text, item will align to that.*/
 }.container {
-  align-items: flex-start | flex-end | center | baseline | stretch;
-}.container {
-  align-items: flex-start | flex-end | center | baseline | stretch;
-}.container {
-  align-items: flex-start | flex-end | center | baseline | stretch;
+  align-items: baseline;
+
+align-content
+.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 }
