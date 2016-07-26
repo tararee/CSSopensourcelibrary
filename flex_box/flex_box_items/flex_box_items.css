@@ -32,23 +32,31 @@ I understand it as poorly as the above.*/
 .item {
   flex-shrink: <number>; /* default 1 */
 }
-Negative numbers are invalid.
 
-flex-basis
-This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). The content keyword means "size it based on the item's content" - this keyword isn't well supported yet, so it's hard to test and harder to know what its brethren max-content, min-content, and fit-content do.
 
+/*flex-basis*/
+
+/*This defines the default size of an element
+before the remaining space is distributed. 
+It can be a length (50%%, 5rem, etc.) or a keyword,
+but the most common keyword was apparently deprecated recently,
+so probably don't use it for now.*/
+/* (default is auto) */
 .item {
-  flex-basis: <length> | auto; /* default auto */
+  flex-basis: <length> | auto; 
 }
 If set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. See this graphic.
 
-flex
-This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.
+/*flex*/
+/*This is the shorthand for flex-grow, flex-shrink and 
+flex-basis combined. Flex-shrink and flex-basis aren't required.
+(Default is 0 1 auto)
+It is highly recommended that you use the shorthand instead
+of setting them individually*/
 
 .item {
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
 }
-It is recommended that you use this shorthand property rather than set the individual properties. The short hand sets the other values intelligently.
 
 align-self
 
