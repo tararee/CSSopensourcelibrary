@@ -42,10 +42,13 @@ It can be a length (50%%, 5rem, etc.) or a keyword,
 but the most common keyword was apparently deprecated recently,
 so probably don't use it for now.*/
 /* (default is auto) */
+/*If set to 0, the extra space around content is diregarded. 
+If set to auto, the extra space is distributed based on its 
+flex-grow value.*/
 .item {
   flex-basis: <length> | auto; 
 }
-If set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. See this graphic.
+
 
 /*flex*/
 /*This is the shorthand for flex-grow, flex-shrink and 
@@ -58,14 +61,11 @@ of setting them individually*/
   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
 }
 
-align-self
-
-This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
-
-Please see the align-items explanation to understand the available values.
-
+/*align-self
+This overrides the align-items property settings
+from the container (see flex_box_containers.css for details)*/
 .item {
-  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+  align-self: auto | flex-start | flex-end | 
+  center | baseline | stretch;
 }
-Note that float, clear and vertical-align have no effect on a flex item.
-
+/*Float, clear and vertical-align have no effect on a flex item!!*/
