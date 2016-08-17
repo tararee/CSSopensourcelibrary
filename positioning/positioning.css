@@ -1,0 +1,29 @@
+position: static; 
+doesn't change the position, 
+it goes along the normal HTML layout
+
+position: relative;
+An element with position: relative; is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties will
+make it adjust away from its normal position.
+
+position: relative;
+    left: 10px;
+will move the element 10 pixels to the left
+
+position: fixed;
+An element with position: fixed; always stays in the same place 
+even if the page is scrolled. The top, right, bottom, and left
+properties are used to position the element.
+
+A fixed element does not leave a gap in the page
+where it would normally have been located.
+
+position: absolute;
+An element with position: absolute; is positioned 
+relative to the nearest 
+positioned ancestor 
+
+
+
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
